@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: false
+  
+  tasks:
+
+  - name: Run an executable using win_command
+    win_command: whoami.exe
+
+  - name: Run a cmd command
+    win_command: cmd.exe /c mkdir C:\test
